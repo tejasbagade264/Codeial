@@ -1,0 +1,261 @@
+
+
+/* Style for the new post form */
+#new-post-form {
+    margin-bottom: 10px;
+}
+
+/* Style for the post textarea */
+#new-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* Style for the post submit button */
+#new-post-form input[type="submit"] {
+   
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#new-post-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the posts list container */
+#posts-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for each individual post */
+.posts-list-container p {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Style for post content */
+.post-content {
+    margin-top: 10px;
+}
+
+/* Style for post user name */
+.post-user {
+    color: #555;
+}
+
+
+/* Styling for posts */
+/* Styling for posts */
+.post {
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.post small {
+    color: #777777;
+}
+
+/* Styling for delete icon */
+.post small a {
+    text-decoration: none;
+    color: #ff5a5f;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.post small a:hover {
+    color: #ff2b2f;
+}
+
+/* Styling for comment form */
+.post-comments {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow-y: auto; /* Add scroll function */
+    max-height: 150px; /* Set maximum height for scroll */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-comments form {
+    margin-top: 15px;
+}
+
+.post-comments input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+
+.post-comments input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-comments input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for comment list */
+.post-comment-list {
+    margin-top: 15px;
+    max-height: 150px; /* Set maximum height for scroll */
+    overflow-y: auto; /* Add scroll function */
+}
+
+.post-comment-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-comment-list p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.post-comment-list small {
+    color: #777777;
+}
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Feed Posts Section */
+#feed-posts {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#new-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#new-post-form input[type="submit"] {
+    background-color: #08f724;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#posts-list-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual Post */
+.post {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user {
+    font-weight: bold;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+/* User Friends Section */
+#user-friends {
+    width: 25%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.friend-list p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.friend-list i {
+    margin-right: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #feed-posts, #user-friends {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+

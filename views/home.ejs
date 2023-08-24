@@ -1,14 +1,53 @@
+<link rel="stylesheet" href="/css/home.css">
 
-        <h1>Codeial / <%= title %> </h1>
-   
-        <section id = "feed-posts">
-           
-                <h4>Posts</h4>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 
-                <form action="" id="new-post-form" method="POST">
-                     <textarea name="content" cols="30" rows="3"></textarea>
-                     <input type="submit" value="post">
-                </form>
+<h1>
+    Codeial / <%= title %>
+</h1>
+
+<div class="container"> 
+
+<section id="feed-posts">
+    <h4>Posts</h4>
+    <% if (locals.user) { %>
+    <form action="/posts/create" id="new-post-form" method="POST">
+        <textarea name="content" cols="30" rows="3" placeholder="type here..." required></textarea>
+        <input type="submit" value="post">
+    </form>
+    <% } %>
+
+    <div id="posts-list-container">
+        <ul>
+            <% for (post of posts) { %>
+ 
+               <%- include('_post') %>
+
+              <%  }  %>
+            </ul>
+        </div>
+    </section>
+
+    <section id="user-friends">
+        <h4>Friends</h4>
+
+        <div class="friend-list">
+        <% for(u of all_users) { %>
+
+        <p >
+            <i class="fa-solid fa-circle" style="color: #08f724;"></i><a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+
+        </p>
+        
+        <% } %>
+    </div>
+    </section>
+
+</div>
+
+<script src="/js/home_posts.js"></script>
 
 
-        </section>
+

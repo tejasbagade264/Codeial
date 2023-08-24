@@ -1,22 +1,27 @@
+<link rel="stylesheet" href="/css/header.css">
 <header>
-    Page Header
+    <h1>
+        Codeial
+    </h1>
 
+    <div class="login-links">
     <ul>
         <% if(locals.user){  %>
-           <li><%= user.name %></li>
-           <li>
-            <a href="/users/sign-Up">Sign Out</a>
+           <li><%= user.name %></li> 
+           <li >
+            <a href="/users/sign-Out">Sign Out</a>
            </li>
 
         <% }else{ %>
              
-            <li>
+            <li id="controls">
                 <a href="/users/sign-In">Sign In</a>
             </li>
-             <li>
+             <li id="controls">
                 <a href="/users/sign-Up">Sign Up</a>
             </li>
         
         <% } %>
     </ul>
+</div>
 </header>

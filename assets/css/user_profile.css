@@ -1,4 +1,44 @@
 
-body{
-    background-color: gold;
+.profile{
+    display: flex;
+    gap:3rem;
+}
+.profile-image{
+   height:300px;
+   width:300px;
+   margin-left: 2rem;
+   border-radius: 50%;
+   border:2px solid black;
+}
+.profile-image img{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-details{
+    text-align: left;
+}
+
+#name {
+    font-weight: bold;
+}
+#email{
+    font-weight: bold;
+}
+
+/* Style the edit icon/button */
+#edit-icon {
+    cursor: pointer;
+    color: #007bff; /* Blue color */
+}
+
+/* Style the edit form */
+#edit-form {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+#edit-form input[type="text"], #edit-form input[type="file"], #edit-form input[type="submit"] {
+    margin-top: 5px;
 }

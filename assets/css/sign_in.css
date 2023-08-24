@@ -67,3 +67,10 @@ input:focus {
 .password i{
     margin-left: 20px;
 }
+.flash-messages{
+    width: 100vw;
+    color: white;
+    background-color: #f70606;
+    
+    margin-left: -570px;
+}

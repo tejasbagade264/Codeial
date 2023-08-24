@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/css/user_profile.css">
+<h1>
+    Profile
+</h1>
+
+<div class="profile">
+<div class="profile-image">
+
+<% if (profile_user.avatar) { %>
+    <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="100">
+<% } %>
+
+</div>
+
+<div class="profile-details">
+
+<% if(user.id == profile_user.id) {%>
+
+
+  <p> <span id="name">Name:</span>   <span><%= profile_user.name %></span>  </p>
+   <p> <span id="email" >Email:</span>   <span><%= profile_user.email %></span> </p>
+
+
+     <p id="edit-icon">Edit Details <i class="fa-solid fa-pen"></i></p>
+    <!-- if user matches shows the form -->
+     <form id="edit-form"  action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+        <input type="text" name="name" placeholder="Your Name" value="<%=profile_user.name%>" required>
+        <input type="text" name="email" placeholder="Your Email" value="<%=profile_user.email%>" required>
+       
+        <input type="file" name="avatar" placeholder="profile Picture">
+        <input type="submit" value="update">
+     </form>
+
+
+
+
+ <% } else { %>
+
+    <p>Name: <%= profile_user.name %></p>
+    <p>Email: <%= profile_user.email %></p>
+    <% } %>
+
+
+</div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Handle edit icon/button click
+        $('#edit-icon').click(function() {
+            $('#edit-form').toggle(); // Toggle the visibility of the edit form
+        });
+    });
+</script>

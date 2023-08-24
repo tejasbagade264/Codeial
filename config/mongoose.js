@@ -1,15 +1,12 @@
-const mongoose= require('mongoose');
+//require library
+const mongoose = require('mongoose');
 
-//mongoose.connect('mongodb://localhost/codeial_developement');
-mongoose.connect('mongodb://127.0.0.1/codeial_developement', {
-});
+//connect to database
+async function main() {
+    const db = await mongoose.connect('mongodb://127.0.0.1:27017/codeial_development');
+    module.exports = db;
+}
 
-const db=mongoose.connection;
-
-db.on('error', console.error.bind(console, "Error connecting to MongoDB"));
-
-db.once('open', function(){
-    console.log('Connected to database:MongoDB');
-});
-
-module.exports = db;
+main()
+.then(() => console.log('MongoDB Connected...')) //if connected
+.catch(err => console.log(err)); //if error

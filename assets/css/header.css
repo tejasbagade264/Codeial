@@ -1,0 +1,31 @@
+header{
+    height:25px;
+    display: flex;
+    justify-content:space-between;
+    padding: 1rem;
+    background-color: darkgray;
+}
+h1{
+   margin-top: 0px;
+}
+.login-links{
+ width:16rem;
+
+}
+.login-links ul{
+   display: flex;
+   justify-content: space-between;
+}
+ #controls{
+    height: 30px;
+    width: 80px;
+   
+    text-align: center;
+    /* border-top-right-radius: 15px; */
+    /* border-bottom-left-radius: 15px;
+    background-color: rgb(245, 32, 32); */
+ }
+ #controls a{
+    text-decoration: none;
+    /* color: white; */
+ }

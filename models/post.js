@@ -1,4 +1,6 @@
 const mongoose= require('mongoose');
+const User = require('./user');
+
 
 const postSchema=new mongoose.Schema({
      content: {
@@ -8,11 +10,24 @@ const postSchema=new mongoose.Schema({
      user:{
         type : mongoose.Schema.Types.ObjectId,
         ref : 'User'
+     },
+     //includes the array of ids of all comments in the post schema itself
+     comments:[
+      {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'Comment'
      }
+   ],
+   likes: [
+      {
+         type : mongoose.Schema.Types.ObjectId,
+         ref : 'Like'
+      }
+   ]
 }, {
     timestamps: true
 });
 
 const Post = mongoose.model('Post', postSchema);
 
-module.exports = post;
+module.exports = Post;
