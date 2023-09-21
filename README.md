@@ -2,6 +2,16 @@
 Codeial - Social Media App
 Codeial is a social media application where users can register, log in, make friends, post, comment, like, and chat with friends. The platform is built using EJS, Node.js, MongoDB, and various Node.js packages such as Nodemailer, Noty, Flash-connect, and more.
 
+# Host Link:
+https://socialmedia-ehp3.onrender.com
+
+# Images
+![Screenshot 2023-09-21 131118](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/36dee296-3f18-4ae6-897a-71e66443f53d)
+
+![Screenshot 2023-09-21 131355](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/68e4c6de-74e7-496c-b178-e10348599513)
+
+![image](https://github.com/tejasbagade264/Issue-Tracker/assets/139443949/ddb4fac3-2ac5-4c4a-969d-d759fd5a85cb)
+
 # Features
 User Registration and Login: Users can create an account and log in securely using Passport.js and JWT tokens.
 
